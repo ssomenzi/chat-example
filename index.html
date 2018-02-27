@@ -8,7 +8,7 @@
     <script>
       $(function () {
         var socket = io();
-        socket.on('connect', function(){
+        socket.on('connection', function(){
           console.log('new connection')
         });
       });
