@@ -18,9 +18,11 @@ npm install
 ```
 
 ### test
-Head to localhost:3000 and you shoud get 'new connection' in the console
+Head to localhost:3000 and you shoud get 'new connection' on the web page and in the
+developers' tool console.
 
-Head to localhost:3000/api and you shoud get back a json with the lighthouse release number
+Head to localhost:3000/api and you shoud get back a json with the lighthouse release number plus the same
+release number in the terminal console.
 
 You can change the port the server listen to by setting the ENV variable PORT to a number that
 better suits you.

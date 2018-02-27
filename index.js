@@ -8,6 +8,7 @@ app.get('/', function(req, res){
 });
 app.get('/api', function(req, res){
   res.json('lighthouse rel:0.0.1');
+  console.log('lighthouse rel:0.0.1')
 });
 
 io.on('connection', function(socket){
