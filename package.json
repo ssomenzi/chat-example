@@ -1,7 +1,7 @@
 {
   "name": "lighthouse",
   "version": "0.0.1",
-  "description": "a simple socket.io signaling server for webrtc based PoC",
+  "description": "a simple socket.io http signaling server for webrtc based PoC",
   "dependencies": {
     "express": "^4.15.2",
     "socket.io": "^1.7.3"
