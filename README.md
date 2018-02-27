@@ -1,6 +1,6 @@
 # lighthouse
 
-This is the source code for a very simple socket.io based http server (no https for the time being)
+This is a fork of [socketsio/chat-example](https://github.com/socketio/chat-example) adapted to run a very simple socket.io based http server (no https for the time being)
  used for handling signaling between PoC clients developed using vuejs and webrtc.
 
 Developing my webrtc project, Lighthouse helps me keep clients' vuex stores synced but you can simply adapt it to serve
