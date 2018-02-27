@@ -1,5 +1,5 @@
 {
-  "name": "Lighthouse",
+  "name": "lighthouse",
   "description": "a simple socket.io signaling server for webrtc based PoC",
   "website": "https://github.com/ssomenzi/lighthouse",
   "repository": "https://github.com/ssomenzi/lighthousee",
