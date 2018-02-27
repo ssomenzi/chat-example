@@ -11,7 +11,7 @@ This server simply listens for events and replies back with broadcasts to the co
 This is really basic stuff not suitable for production, made just to barely
 support development.
 
-I pull in express just for routing. Quite an overkill but... again... it's just to support development
+I pull in express just for serving the index.html page for testing pourposes. Quite an overkill but... again... it's just to support development
 
 ### install
 After you've cloned the repository in a project directory, cd in the project directory and run
