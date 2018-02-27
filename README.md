@@ -1,9 +1,9 @@
 # lighthouse
 
-This is the source code for a very simple socket.io based server serves over http
-(no https for the time being) used for handling signaling between PoC clients developed using vuejs and webrtc.
+This is the source code for a very simple socket.io based http server (no https for the time being)
+ used for handling signaling between PoC clients developed using vuejs and webrtc.
 
-Developing my webrtc project, Lighthouse helps keep clients' vuex stores synced but you can simply adapt it to serve
+Developing my webrtc project, Lighthouse helps me keep clients' vuex stores synced but you can simply adapt it to serve
 any pourpose you like.
 
 This server simply listens for events and replies back with broadcasts to the connected clients.
