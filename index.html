@@ -4,13 +4,37 @@
     <title>dev61::lighthouse</title>
   </head>
   <body>
-    new connection
+    new connection<br>
+    <div>
+      Name: <span id="name">dummy</span><br>
+      Value: <span id="value">dummy</span>
+    </div>
+    <button  type="button" onclick="sendToAll()">Emit Update State</button><br>
+    <button  type="button" onclick="broadcastUpdateState()">Broadcast Update State</button>
     <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
     <script>
+      var state = { name: "connected", value: true }
       var socket = io();
-      socket.on('connect', function(){
+
+      socket.on('connect', () => {
         console.log('new connection')
       });
+      socket.on('connected', (id) => {
+        console.log('connected with:', id)
+      });
+      socket.on('update', (state) => {
+        this.state = state
+        document.getElementById('name').innerHTML = this.state.name
+        document.getElementById('value').innerHTML = this.state.value
+      });
+      function sendToAll () {
+        console.log('Requesting update for all users including sender')
+        socket.emit('sendtoall', state)
+      }
+      function broadcastUpdateState () {
+        console.log('Requesting update for all users but sender')
+        socket.emit('broadcast', state)
+      }
     </script>
   </body>
 </html>

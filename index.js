@@ -12,7 +12,21 @@ app.get('/api', function(req, res){
 });
 
 io.on('connection', function(socket){
+  var id = socket.id
+  console.log('user connected', id);
   io.emit('connect');
+  socket.emit('connected', id);
+  socket.on('disconnect', function(){
+    console.log('user disconnected')
+  });
+  socket.on('sendtoall', (state) => {
+    console.log('updating state')
+    io.emit('update', state)
+  });
+  socket.on('broadcast', (state) => {
+    console.log('broadcasting state')
+    socket.broadcast.emit('update', state)
+  });
 });
 
 http.listen(port, function(){
